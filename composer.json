@@ -3,6 +3,7 @@
   "type": "project",
   "license": "MIT",
   "description": "WordPress developing right, smart and easy",
+  "stability":"stable",
   "homepage": "https://roots.io/bedrock/",
   "authors": [
     {
