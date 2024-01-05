@@ -40,7 +40,10 @@
     "roots/wordpress": "6.4.2",
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.1.0",
-    "wpackagist-theme/twentytwentyfour": "^1.0"
+    "timber/timber": "^2.0",
+    "snooper7/vyatka-it-wp-theme": "latest",
+    "wpackagist-plugin/classic-editor": "^1.6",
+    "wpackagist-plugin/cyr2lat": "^6.0"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.7.1",
