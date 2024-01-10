@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a080a095fe9dc496c9026bf0f634ed8a",
+    "content-hash": "ab88f040ac7a875e181c9053ad3c1ef0",
     "packages": [
         {
             "name": "composer/installers",
@@ -212,6 +212,62 @@
                 }
             ],
             "time": "2023-11-12T22:16:48+00:00"
+        },
+        {
+            "name": "mnsami/composer-custom-directory-installer",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mnsami/composer-custom-directory-installer.git",
+                "reference": "85f66323978d0b1cb0e6acc7f69b3e7b912f82d9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mnsami/composer-custom-directory-installer/zipball/85f66323978d0b1cb0e6acc7f69b3e7b912f82d9",
+                "reference": "85f66323978d0b1cb0e6acc7f69b3e7b912f82d9",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0 || ^2.0",
+                "php": ">=5.3"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": [
+                    "Composer\\CustomDirectoryInstaller\\LibraryPlugin",
+                    "Composer\\CustomDirectoryInstaller\\PearPlugin",
+                    "Composer\\CustomDirectoryInstaller\\PluginPlugin"
+                ],
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Composer\\CustomDirectoryInstaller": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mina Nabil Sami",
+                    "email": "mina.nsami@gmail.com"
+                }
+            ],
+            "description": "A composer plugin, to help install packages of different types in custom paths.",
+            "keywords": [
+                "composer",
+                "composer-installer",
+                "composer-plugin"
+            ],
+            "support": {
+                "issues": "https://github.com/mnsami/composer-custom-directory-installer/issues",
+                "source": "https://github.com/mnsami/composer-custom-directory-installer/tree/2.0.0"
+            },
+            "time": "2020-08-18T11:00:11+00:00"
         },
         {
             "name": "oscarotero/env",
@@ -868,6 +924,38 @@
             "time": "2021-10-31T01:18:58+00:00"
         },
         {
+            "name": "snooper7/frontend",
+            "version": "v1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Snooper7/frontend.git",
+                "reference": "2dc50d07e059195968f1b3426cb5dbcdc6b88727"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Snooper7/frontend/zipball/2dc50d07e059195968f1b3426cb5dbcdc6b88727",
+                "reference": "2dc50d07e059195968f1b3426cb5dbcdc6b88727",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Snooper",
+                    "email": "snooper7@yandex.ru"
+                }
+            ],
+            "description": "Everything that you need for frontend develop",
+            "support": {
+                "issues": "https://github.com/Snooper7/frontend/issues",
+                "source": "https://github.com/Snooper7/frontend/tree/v1.0.3"
+            },
+            "time": "2024-01-10T16:53:43+00:00"
+        },
+        {
             "name": "snooper7/vyatka-it-wp-theme",
             "version": "v0.9.3",
             "source": {
@@ -1440,12 +1528,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "c8682d0318353f7979a429981e902463e4879cf0"
+                "reference": "02dfd4d343b67ea455fc1e22324dbdaa872f547a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/c8682d0318353f7979a429981e902463e4879cf0",
-                "reference": "c8682d0318353f7979a429981e902463e4879cf0",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/02dfd4d343b67ea455fc1e22324dbdaa872f547a",
+                "reference": "02dfd4d343b67ea455fc1e22324dbdaa872f547a",
                 "shasum": ""
             },
             "conflict": {
@@ -1697,6 +1785,7 @@
                 "joyqi/hyper-down": "<=2.4.27",
                 "jsdecena/laracom": "<2.0.9",
                 "jsmitty12/phpwhois": "<5.1",
+                "juzaweb/cms": "<=3.4",
                 "kazist/phpwhois": "<=4.2.6",
                 "kelvinmo/simplexrd": "<3.1.1",
                 "kevinpapst/kimai2": "<1.16.7",
@@ -1730,7 +1819,7 @@
                 "lms/routes": "<2.1.1",
                 "localizationteam/l10nmgr": "<7.4|>=8,<8.7|>=9,<9.2",
                 "luyadev/yii-helpers": "<1.2.1",
-                "magento/community-edition": "<=2.4",
+                "magento/community-edition": "<2.4.1.0-patch1",
                 "magento/magento1ce": "<1.9.4.3-dev",
                 "magento/magento1ee": ">=1,<1.14.4.3-dev",
                 "magento/product-community-edition": ">=2,<2.2.10|>=2.3,<2.3.2.0-patch2",
@@ -1839,9 +1928,10 @@
                 "phpxmlrpc/phpxmlrpc": "<4.9.2",
                 "pi/pi": "<=2.5",
                 "pimcore/admin-ui-classic-bundle": "<1.2.2",
-                "pimcore/customer-management-framework-bundle": "<3.4.2",
+                "pimcore/customer-management-framework-bundle": "<4.0.6",
                 "pimcore/data-hub": "<1.2.4",
                 "pimcore/demo": "<10.3",
+                "pimcore/ecommerce-framework-bundle": "<1.0.10",
                 "pimcore/perspective-editor": "<1.5.1",
                 "pimcore/pimcore": "<11.1.1",
                 "pixelfed/pixelfed": "<=0.11.4",
@@ -2156,7 +2246,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-01-05T21:04:02+00:00"
+            "time": "2024-01-10T17:04:28+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",

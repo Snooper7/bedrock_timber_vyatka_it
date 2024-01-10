@@ -34,6 +34,7 @@
   "require": {
     "php": ">=8.0",
     "composer/installers": "^2.2",
+    "mnsami/composer-custom-directory-installer": "^2.0",
     "vlucas/phpdotenv": "^5.5",
     "oscarotero/env": "^2.1",
     "roots/bedrock-autoloader": "^1.0",
@@ -43,6 +44,7 @@
     "roots/wp-password-bcrypt": "1.1.0",
     "timber/timber": "^2.0",
     "snooper7/vyatka-it-wp-theme": "0.9.3",
+    "snooper7/frontend": "^1.0",
     "wpackagist-plugin/classic-editor": "^1.6",
     "wpackagist-plugin/cyr2lat": "^6.0"
   },
@@ -55,7 +57,8 @@
     "preferred-install": "dist",
     "allow-plugins": {
       "composer/installers": true,
-      "roots/wordpress-core-installer": true
+      "roots/wordpress-core-installer": true,
+      "mnsami/composer-custom-directory-installer": true
     }
   },
   "prefer-stable": true,
@@ -63,7 +66,8 @@
     "installer-paths": {
       "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
       "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
-      "web/app/themes/{$name}/": ["type:wordpress-theme"]
+      "web/app/themes/{$name}/": ["type:wordpress-theme"],
+      "./resources/": ["snooper7/frontend"]
     },
     "wordpress-install-dir": "web/wp"
   },
