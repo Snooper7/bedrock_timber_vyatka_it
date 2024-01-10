@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ab88f040ac7a875e181c9053ad3c1ef0",
+    "content-hash": "428343b7b8d72bfbcfdae24a538e1a23",
     "packages": [
         {
             "name": "composer/installers",
@@ -957,16 +957,16 @@
         },
         {
             "name": "snooper7/vyatka-it-wp-theme",
-            "version": "v0.9.3",
+            "version": "v0.9.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Snooper7/vyatka-it-wp-theme.git",
-                "reference": "d9591d1c877250d2e094ecc03030da54493ee0ea"
+                "reference": "0d55acd2839492ff6c921cbebba4fda8e4445213"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Snooper7/vyatka-it-wp-theme/zipball/d9591d1c877250d2e094ecc03030da54493ee0ea",
-                "reference": "d9591d1c877250d2e094ecc03030da54493ee0ea",
+                "url": "https://api.github.com/repos/Snooper7/vyatka-it-wp-theme/zipball/0d55acd2839492ff6c921cbebba4fda8e4445213",
+                "reference": "0d55acd2839492ff6c921cbebba4fda8e4445213",
                 "shasum": ""
             },
             "require": {
@@ -974,6 +974,11 @@
             },
             "type": "wordpress-theme",
             "autoload": {
+                "files": [
+                    "src/config.php",
+                    "src/filters.php",
+                    "src/api.php"
+                ],
                 "psr-4": {
                     "App\\": "src/",
                     "App\\Services\\": "src/services",
@@ -993,9 +998,9 @@
             "description": "Theme for smart WordPress developing by Vyatka-IT team.",
             "support": {
                 "issues": "https://github.com/Snooper7/vyatka-it-wp-theme/issues",
-                "source": "https://github.com/Snooper7/vyatka-it-wp-theme/tree/v0.9.3"
+                "source": "https://github.com/Snooper7/vyatka-it-wp-theme/tree/v0.9.4"
             },
-            "time": "2024-01-09T17:09:32+00:00"
+            "time": "2024-01-10T17:34:54+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
