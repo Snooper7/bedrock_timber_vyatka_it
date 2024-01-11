@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ba9bb7516991c8ada26de65f8934d248",
+    "content-hash": "7376f7c48e1ccab392fed7c11cb863d8",
     "packages": [
         {
             "name": "composer/installers",
@@ -787,38 +787,6 @@
             "time": "2021-10-31T01:18:58+00:00"
         },
         {
-            "name": "snooper7/frontend",
-            "version": "v1.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Snooper7/frontend.git",
-                "reference": "2dc50d07e059195968f1b3426cb5dbcdc6b88727"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Snooper7/frontend/zipball/2dc50d07e059195968f1b3426cb5dbcdc6b88727",
-                "reference": "2dc50d07e059195968f1b3426cb5dbcdc6b88727",
-                "shasum": ""
-            },
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Snooper",
-                    "email": "snooper7@yandex.ru"
-                }
-            ],
-            "description": "Everything that you need for frontend develop",
-            "support": {
-                "issues": "https://github.com/Snooper7/frontend/issues",
-                "source": "https://github.com/Snooper7/frontend/tree/v1.0.3"
-            },
-            "time": "2024-01-10T16:53:43+00:00"
-        },
-        {
             "name": "symfony/polyfill-ctype",
             "version": "v1.28.0",
             "source": {
@@ -1367,12 +1335,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "81ad497391b9fc55e18be0c94bf2a288f231630b"
+                "reference": "10ac801c0da30759756dacc701aa49346cc47216"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/81ad497391b9fc55e18be0c94bf2a288f231630b",
-                "reference": "81ad497391b9fc55e18be0c94bf2a288f231630b",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/10ac801c0da30759756dacc701aa49346cc47216",
+                "reference": "10ac801c0da30759756dacc701aa49346cc47216",
                 "shasum": ""
             },
             "conflict": {
@@ -1663,6 +1631,7 @@
                 "magento/magento1ce": "<1.9.4.3-dev",
                 "magento/magento1ee": ">=1,<1.14.4.3-dev",
                 "magento/product-community-edition": ">=2,<2.2.10|>=2.3,<2.3.2.0-patch2",
+                "magneto/core": "<1.9.4.4-dev",
                 "maikuolan/phpmussel": ">=1,<1.6",
                 "mainwp/mainwp": "<=4.4.3.3",
                 "mantisbt/mantisbt": "<=2.25.7",
@@ -2086,7 +2055,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-01-11T00:14:53+00:00"
+            "time": "2024-01-11T16:04:24+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
