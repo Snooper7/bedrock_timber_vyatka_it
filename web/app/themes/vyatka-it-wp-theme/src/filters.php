@@ -4,6 +4,7 @@ use App\Resources\Service;
 // Global Context
 add_filter('timber/context', function ($context) {
     $context[ 'phone' ] = get_field('phone', 'options');
+    $context[ 'assets' ] = ASSETS;
 
     return $context;
 });
