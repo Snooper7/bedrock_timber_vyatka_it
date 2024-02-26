@@ -52,3 +52,12 @@ function mytheme_add_woocommerce_support(): void
     add_theme_support('woocommerce');
 }
 add_action('after_setup_theme', 'mytheme_add_woocommerce_support');
+
+add_filter( 'upload_mimes', 'svg_upload_allow' );
+
+# Добавляет SVG в список разрешенных для загрузки файлов.
+function svg_upload_allow( $mimes ) {
+    $mimes['svg']  = 'image/svg+xml';
+
+    return $mimes;
+}

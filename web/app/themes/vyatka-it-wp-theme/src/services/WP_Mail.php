@@ -2,66 +2,50 @@
 
 namespace App\Services;
 
+use App\System\Log;
 use PHPMailer\PHPMailer\PHPMailer;
-use WP_REST_Request;
 
 class WP_Mail
 {
-    private $errors     = [];
-    private $to         = 'ruslan.dev@vyatka-it.ru';
-    private $from       = 'info@vyatka-it.ru';
-    private $from_title = 'Bedrock';
-    private $subject    = 'Новая заявка';
+    private $to         = 's.perminov@vyatka-it.ru';
+    private $from       = 'info@xn----7sbzkmth6f.xn--p1ai';
+    private $from_title = 'Сталь-инжиниринг';
+    private $subject    = 'Новая заявка с сайта';
     private $message    = '';
 
-    public function send(WP_REST_Request $request): array
+    public function send($message, $subject = ''): bool
     {
-        if ($this->simpleValidate($request)) {
-            $response = $this->mail();
+        $this->message = $message;
 
-            if ($response) {
-                return [
-                    'success' => 'Успешно'
-                ];
-            } else {
-                return [
-                    'errors' => [
-                        'Ошибка отправки'
-                    ]
-                ];
-            }
+        if (!empty($subject)) {
+            $this->subject = $subject;
+        }
+
+        if ($response = $this->mail()) {
+            Log::write([
+                'response' => $response
+            ], 'mail');
+
+            return true;
         } else {
-            return [
-                'errors' => [
-                    'Ошибка отправки'
-                ]
-            ];
+            return false;
         }
-    }
-
-    private function simpleValidate(WP_REST_Request $request) : bool
-    {
-        if (!empty($request->get_param('phone'))) {
-            $this->errors[ 'phone' ] = 'Укажите телефон';
-        }
-
-        return empty($this->errors);
     }
 
     private function mail() : bool
     {
-        //$mailer = new PHPMailer();
-        //$mailer->CharSet = 'UTF-8';
-        //$mailer->Subject = $this->subject;
-        //$mailer->Body = $this->message;
-        //$mailer->isHTML(false);
-        //$mailer->setFrom($this->from, $this->from_title);
-        //$mailer->addAddress($this->to);
-        //
-        //if ($this->send()) {
+        $mailer = new PHPMailer();
+        $mailer->CharSet = 'UTF-8';
+        $mailer->Subject = $this->subject;
+        $mailer->Body = $this->message;
+        $mailer->isHTML(false);
+        $mailer->setFrom($this->from, $this->from_title);
+        $mailer->addAddress($this->to);
+
+        if ($mailer->send()) {
             return true;
-        //}
-        //
-        //return false;
+        }
+
+        return false;
     }
 }
