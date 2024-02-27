@@ -40,6 +40,35 @@ export default class Slider {
                 }
             })
         }
+        // Section Reviews
+        const reviews = document.querySelector('.reviews__slider')
+        if (reviews) {
+            this.createSlider(reviews, {
+                slidesPerView: 1,
+                spaceBetween: 8,
+                allowTouchMove: true,
+                centeredSlides: true,
+                loop: true,
+                breakpoints: {
+                    1200: {
+                        slidesPerView: 3,
+                        spaceBetween: 24,
+                    },
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 16,
+                    },
+                    // autoHeight: false,
+                    // calculateHeight: false,
+                    speed: 1000,
+                    autoplay: {
+                        delay: 4000,
+                        disableOnInteraction: true,
+                        pauseOnMouseEnter: false
+                    }
+                }
+            })
+        }
     }
 
     static createSlider(parent, options) {
