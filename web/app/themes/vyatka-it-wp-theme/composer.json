@@ -7,10 +7,11 @@
             "App\\Services\\": "src/services"
         },
         "files": [
+            "src/api.php",
+            "src/acf.php",
             "src/config.php",
             "src/filters.php",
-            "src/api.php",
-            "src/acf.php"
+            "src/helper.php"
         ]
     },
     "authors": [

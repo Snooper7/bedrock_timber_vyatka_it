@@ -7,6 +7,16 @@
 
     <title>Название сайта</title>
 
+    <link rel="shortcut icon" href="{{ assets }}/images/icons/Favicon.svg" type="image/svg">
+
+    <script>
+      window.assets = '{{ assets }}'
+    </script>
+
+    {% if header_code is not empty %}
+      {{ header_code }}
+    {% endif %}
+
     {{ function('wp_head') }}
 </head>
 <body>
@@ -15,6 +25,16 @@
     <div class="container">
         <div class="header__container">
             Header
+            <nav class="header__menu control-m color-ondark">
+                <ul class="header__menu-items dfrcsb" data-max-items-in-expanded-menu="4"
+                    data-button-content='{% include "parts/flexible-menu-button.twig" %}'>
+                    {% for item in main_menu.items %}
+                        <li class="header__menu-item control-m color-ondark">
+                          <a href="{{ item.link }}" {{ item.is_target_blank ? 'target="_blank"' }}>{{ item.title }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </nav>
         </div>
     </div>
 </header>
