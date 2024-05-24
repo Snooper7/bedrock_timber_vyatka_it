@@ -4,7 +4,8 @@
         "psr-4": {
             "App\\": "src/",
             "App\\Resources\\": "src/resources",
-            "App\\Services\\": "src/services"
+            "App\\Services\\": "src/services",
+            "App\\System\\": "src/system"
         },
         "files": [
             "src/api.php",

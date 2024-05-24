@@ -8,7 +8,8 @@ let sliders = []
 export {sliders}
 
 export default class Slider {
-    static reInit() {
+    static reInit()
+    {
         if (sliders) {
             sliders.forEach(slider => slider.destroy())
         }
@@ -16,20 +17,21 @@ export default class Slider {
         Slider.init()
     }
 
-    static init() {
-        // Added class for splide slides
+    static init()
+    {
+      // Added class for splide slides
         if (document.querySelectorAll('.swiper-wrapper')) {
             document.querySelectorAll('.swiper-wrapper > *').forEach(slide => slide.classList.add('swiper-slide'))
         }
 
-        // Главный экран
-        const slider = document.querySelector('.slider')
+      // Главный экран
+        const slider = document.querySelector('.main-screen__slider')
         if (slider) {
             this.createSlider(slider, {
-                slidesPerView: 3,
+                slidesPerView: 1,
                 spaceBetween: 12,
-                allowTouchMove: false,
-                loop: false,
+                allowTouchMove: true,
+                loop: true,
                 autoHeight: false,
                 calculateHeight: false,
                 speed: 1000,
@@ -37,10 +39,15 @@ export default class Slider {
                     delay: 4000,
                     disableOnInteraction: true,
                     pauseOnMouseEnter: false
+                },
+                on: {
+                    init: () => {
+                        slider.classList.add('loaded')
+                    }
                 }
             })
         }
-        // Section Reviews
+      // Section Reviews
         const reviews = document.querySelector('.reviews__slider')
         if (reviews) {
             this.createSlider(reviews, {
@@ -71,12 +78,13 @@ export default class Slider {
         }
     }
 
-    static createSlider(parent, options) {
+    static createSlider(parent, options)
+    {
         const box = parent
         const swiper = box.querySelector('.swiper')
 
         if (swiper) {
-            // Arrows
+          // Arrows
             const prev_arrow = box.querySelector('.slider__arrow--prev')
             const next_arrow = box.querySelector('.slider__arrow--next')
 
@@ -87,44 +95,46 @@ export default class Slider {
                 }
             }
 
-            // Dotted
+          // Dotted
             const dotted = box.querySelector('.dotted')
 
             if (dotted) {
                 options.pagination = {
                     el: dotted,
-                    type:'bullets',
+                    type: 'bullets',
                     clickable: true
                 }
             }
 
-            // Индикаторы
+          // Индикаторы
             const indicator = box.querySelector('.slider-indicator')
 
             if (indicator) {
                 options.pagination = {
                     el: indicator,
-                    type:'fraction',
+                    type: 'fraction',
                 }
             }
 
             let slider = new Swiper(swiper, options)
 
-            // Переключатели
+          // Переключатели
             const slider_toggle = swiper.closest('[data-slide-toggle]')
 
             if (slider_toggle) {
                 const slider_togglers = slider_toggle.querySelectorAll('[data-slide-target]')
 
-                if (slider_togglers) slider_togglers.forEach(slide => {
-                    slide.addEventListener('click', (e) => {
-                        slider_togglers.forEach(slide_ => slide_.classList.remove('active'))
-                        slide.classList.add('active')
+                if (slider_togglers) {
+                    slider_togglers.forEach(slide => {
+                                slide.addEventListener('click', (e) => {
+                                    slider_togglers.forEach(slide_ => slide_.classList.remove('active'))
+                                    slide.classList.add('active')
 
-                        const target = parseInt(slide.dataset.slideTarget)
-                        slider.slideTo(target)
+                                    const target = parseInt(slide.dataset.slideTarget)
+                                    slider.slideTo(target)
+                                                })
                     })
-                })
+                }
             }
 
             sliders.push(slider)

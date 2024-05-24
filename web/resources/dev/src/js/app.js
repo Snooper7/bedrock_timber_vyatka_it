@@ -10,6 +10,7 @@ import './classes/CookieAccept.js'
 import './classes/ToTop.js'
 import './classes/Rating.js'
 import './classes/ReviewForm.js'
+import './classes/Form.js'
 
 import './classes/Hover3D.js'
 import './classes/Inputer.js'

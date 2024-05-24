@@ -1,0 +1,16 @@
+<div x-show="openFixedMenu" class="fixed-menu">
+    <div class="fixed-menu__content">
+        <div class="fixed-menu__links dfcc">
+            {% for item in main_menu.items %}
+                <li class="fixed-menu__link title title_h5 color-ondark">
+                    <a href="{{ item.link }}" {{ item.is_target_blank ? 'target="_blank"' }}>{{ item.title }}</a>
+                </li>
+            {% endfor %}
+        </div>
+        <div class="fixed-menu__contacts dfcc">
+            <a href="tel:+{{ cleared_phone }}" class="header__phone accent-m color-ondark" target="_blank">{{ phone }}</a>
+            <button class="header__callback control-m color-brand1" data-modal="callback">Заказать звонок
+            </button>
+        </div>
+    </div>
+</div>

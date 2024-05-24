@@ -7,6 +7,7 @@
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/web/app/themes/vyatka-it-wp-theme/src/resources" isTestSource="false" packagePrefix="App\Resources\" />
       <sourceFolder url="file://$MODULE_DIR$/web/app/themes/vyatka-it-wp-theme/src/services" isTestSource="false" packagePrefix="App\Services\" />
+      <sourceFolder url="file://$MODULE_DIR$/web/app/themes/vyatka-it-wp-theme/src/system" isTestSource="false" packagePrefix="App\System\" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/graham-campbell/result-type" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/oscarotero/env" />

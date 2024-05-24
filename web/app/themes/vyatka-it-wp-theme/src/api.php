@@ -25,6 +25,19 @@ add_filter('woocommerce_is_rest_api_request', function ($is_rest_api_request) {
 
 function register_routes()
 {
+    register_rest_route(API_NAMESPACE, '/send_lead', [
+        'methods'  => 'POST',
+        'callback' => [ new WP_Notification(), 'notify_lead' ],
+        'permission_callback' => 'my_permission_callback',
+    ]);
+
+    // Gallery
+    register_rest_route(API_NAMESPACE, '/gallery/load', [
+        'methods'  => 'POST',
+        'callback' => [ new WP_Gallery(), 'load' ],
+        'permission_callback' => 'my_permission_callback',
+    ]);
+
     register_rest_route(API_NAMESPACE, '/review/add', [
         'methods'  => 'POST',
         'callback' => [ new WP_Review(), 'add' ],
